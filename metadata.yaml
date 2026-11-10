@@ -8,4 +8,4 @@ desc: >-
   指令：/电费
 version: 1.4.0
 author: 秉烛
-repo: ""
+repo: https://github.com/Planetarium2025/astrbot_plugin_ahu_elec
