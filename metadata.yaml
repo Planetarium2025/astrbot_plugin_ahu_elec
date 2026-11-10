@@ -1,0 +1,11 @@
+name: ahu_elec
+display_name: 安大电费查询
+short_desc: 查询安徽大学宿舍照明/空调剩余电量
+desc: >-
+  基于安徽大学一卡通系统（ycard.ahu.edu.cn）的电控缴费接口，查询绑定宿舍的照明电费和
+  空调电费剩余电量。可在配置页选择“电控缴费A / B / C”三个缴费窗口。支持 CAS 统一身份
+  认证登录（内置纯 Python 3DES 实现，无浏览器、无 node 依赖）、定时推送与会话白名单。
+  指令：/电费
+version: 1.4.0
+author: 秉烛
+repo: ""

@@ -1,0 +1,2 @@
+httpx>=0.25.0
+APScheduler>=3.10,<4.0

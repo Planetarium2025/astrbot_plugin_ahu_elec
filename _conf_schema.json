@@ -1,0 +1,63 @@
+{
+  "username": {
+    "description": "学号 / 一卡通账号",
+    "type": "string",
+    "default": ""
+  },
+  "password": {
+    "description": "统一身份认证密码（仅保存在本机 AstrBot 配置中，请勿分享配置文件）",
+    "type": "string",
+    "default": "",
+    "secret": true
+  },
+  "fee_window": {
+    "description": "电费缴费窗口",
+    "type": "string",
+    "default": "C",
+    "options": ["A", "B", "C"],
+    "labels": ["电控缴费A（408）", "电控缴费B（428）", "电控缴费C（488）"],
+    "hint": "选你在 ycard 手机端绑定过宿舍的那个窗口。三个窗口的绑定相互独立；若 C 查不到绑定，可把下面的 feeitemid 改成 429 或 468 再试。"
+  },
+  "feeitemid": {
+    "description": "高级项：自定义 feeitemid（留空则按所选窗口自动映射，一般无需填写）",
+    "type": "string",
+    "default": "",
+    "hint": "留空即可。若「电控缴费C」查不到绑定，可尝试 429 或 468（另外两个同名 C 项目）；A=408，B=428。"
+  },
+  "schedule_enable": {
+    "description": "是否启用定时推送电费信息",
+    "type": "bool",
+    "default": false
+  },
+  "schedule_cron": {
+    "description": "定时表达式：5 段 cron（分 时 日 月 周），如 \"0 9 * * *\" 表示每天 09:00",
+    "type": "string",
+    "default": "0 9 * * *",
+    "hint": "分 时 日 月 周。示例：0 9 * * * 每天9点；0 12,18 * * * 每天12点和18点；30 8 * * 1-5 工作日8点半"
+  },
+  "schedule_target": {
+    "description": "定时推送的目标会话 UMO（格式：平台ID:消息类型:会话ID）。强烈建议留空，在目标会话发送 /电费bind 自动填入（自动使用正确的平台ID，如 robot01:GroupMessage:群号）",
+    "type": "string",
+    "default": "",
+    "hint": "手动填写请先用 /sid 查看当前会话 UMO 并原样复制（注意第一段是平台ID而非适配器名，如 aiocqhttp 适配器的ID可能是 robot01）。群聊示例：robot01:GroupMessage:123456789"
+  },
+  "whitelist_enable": {
+    "description": "是否启用会话白名单：启用后仅允许白名单中的 QQ 群/私聊使用本插件",
+    "type": "bool",
+    "default": false
+  },
+  "whitelist_groups": {
+    "description": "允许使用本插件的 QQ 群号列表（启用白名单时生效）",
+    "type": "list",
+    "item_type": "string",
+    "default": [],
+    "hint": "示例：[\"123456789\"]。群聊消息的 UMO 第三段即群号，可用 /sid 查看"
+  },
+  "whitelist_private": {
+    "description": "允许使用本插件的 QQ 号（私聊）列表（启用白名单时生效）",
+    "type": "list",
+    "item_type": "string",
+    "default": [],
+    "hint": "示例：[\"10001\"]。私聊消息的 UMO 第三段即对方 QQ 号"
+  }
+}
