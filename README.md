@@ -1,5 +1,9 @@
 # 安大电费查询（astrbot_plugin_ahu_elec）
 
+<p>
+  <img src="logo.png" width="140" alt="安大电费查询">
+</p>
+
 仓库地址：https://github.com/Planetarium2025/astrbot_plugin_ahu_elec
 
 安徽大学宿舍电费查询的 [AstrBot](https://github.com/AstrBotDevs/AstrBot) 插件。通过安徽大学一卡通系统（`ycard.ahu.edu.cn`）的「电控缴费」接口，查询绑定宿舍的**照明电费**与**空调电费**剩余电量。

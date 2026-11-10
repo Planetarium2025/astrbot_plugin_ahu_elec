@@ -39,7 +39,7 @@ FEE_WINDOWS = {
 }
 
 
-@register("ahu_elec", "秉烛", "查询安徽大学宿舍照明/空调剩余电量", "1.4.0", "")
+@register("ahu_elec", "秉烛", "查询安徽大学宿舍照明/空调剩余电量", "1.0.0", "")
 class AhuElecPlugin(Star):
     def __init__(self, context: Context, config: AstrBotConfig):
         super().__init__(context)
@@ -289,7 +289,7 @@ class AhuElecPlugin(Star):
 
     def _help_text(self) -> str:
         return (
-            "安徽大学电费查询插件 v1.4.0\n"
+            "安徽大学电费查询插件 v1.0.0\n"
             "指令：\n"
             "  /电费 —— 查询当前窗口的剩余电量\n"
             "  /电费bind —— 把当前会话设为定时推送目标\n"

@@ -6,6 +6,6 @@ desc: >-
   空调电费剩余电量。可在配置页选择“电控缴费A / B / C”三个缴费窗口。支持 CAS 统一身份
   认证登录（内置纯 Python 3DES 实现，无浏览器、无 node 依赖）、定时推送与会话白名单。
   指令：/电费
-version: 1.4.0
+version: 1.0.0
 author: 秉烛
 repo: https://github.com/Planetarium2025/astrbot_plugin_ahu_elec
